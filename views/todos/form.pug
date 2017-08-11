@@ -1,0 +1,14 @@
+extends ../_shared/_master
+block head
+    script(src="https://rawgit.com/bassjobsen/Bootstrap-3-Typeahead/master/bootstrap3-typeahead.js")
+    link(rel="stylesheet", href="/libs/typeahead/style.css")
+    script(src="/static/js/todos.js")
+
+block body
+    !=messages()
+
+    form(action="/todos" method="POST")
+        input.form-control(name="text" type="text" placeholder="Enter text" autofocus required)
+        input.form-control(name="isDone" type="checkbox")
+        input#autocomplete
+        button.btn.btn-success Save

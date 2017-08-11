@@ -1,0 +1,7 @@
+extends ../_shared/_master
+block body
+    !=messages()
+
+    form(action="/items" method="POST")
+        input.form-control(name="text" type="text" placeholder="Enter text" autofocus required)
+        button.btn.btn-success Save
